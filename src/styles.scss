@@ -42,7 +42,7 @@ h1 {
   text-align: center;
   font-size: 2em;
   color: #fff;
-  margin: 3em 0em 2em 0em;
+  margin: 3em 0 2em 0;
   font-family: 'Quicksand', sans-serif;
 }
 .element {
@@ -66,7 +66,7 @@ h1 {
 }
 .ele-strip ul li {
   display: inline-block;
-  padding: 0em 0.5em;
+  padding: 0 0.5em;
   border-right: 1px solid #fff;
 }
 .ele-strip ul li a{
@@ -79,7 +79,7 @@ span.line {
   width: 103px;
   height: 2px;
   display: block;
-  margin: 0.6em auto 0em;
+  margin: 0.6em auto 0;
 }
 span.w-line {
   background: url(assets/images/w-line.png)no-repeat;
@@ -89,7 +89,7 @@ span.w-line {
   margin:0.73em auto 0.72em;
 }
 .element-bg-img img {
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0 0;
 }
 .element-left {
   float: left;
@@ -129,7 +129,7 @@ ul li.anc-bor {
 .village {
   background: #fff;
   padding: 1.5em 1em;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 .village h3 {
   text-align: center;
@@ -140,7 +140,7 @@ ul li.anc-bor {
 }
 .copy-right {
   text-align: center;
-  padding:0em 0em 2em 0em;
+  padding:0 0 2em 0;
 }
 .copy-right p {
   font-size: 1em;
@@ -162,7 +162,7 @@ ul li.anc-bor {
     width: 15px!important;
   }
   .ele-strip ul li {
-    padding: 0em 0.8em;
+    padding: 0 0.8em;
   }
   .element-right {
     width: 40%;
@@ -171,7 +171,7 @@ ul li.anc-bor {
     width: 43%;
   }
   .ele-strip ul li {
-    padding: 0em 0.4em;
+    padding: 0 0.4em;
   }
   .teddy-text {
     padding: 1.2em 1em;
@@ -234,14 +234,14 @@ ul li.anc-bor {
   .element-right {
     width: 100%;
     float: none;
-    margin: 1.5em 0em 0em 0em;
+    margin: 1.5em 0 0 0;
   }
   .element {
     width: 80%;
   }
   h1 {
     font-size: 1.8em;
-    margin: 1.5em 0em 1em 0em;
+    margin: 1.5em 0 1em 0;
   }
   .jspContainer {
     width: 335px !important;
@@ -259,7 +259,7 @@ ul li.anc-bor {
 @media(max-width:320px){
   h1 {
     font-size: 1.5em;
-    margin: 1em 0em 1em 0em;
+    margin: 1em 0;
   }
   .element {
     width: 95%;

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {AppHotelsModule} from './app-hotels/app-hotels.module';
+import { AppHotelsModule } from './app-hotels/app-hotels.module';
 
 @NgModule({
   declarations: [
