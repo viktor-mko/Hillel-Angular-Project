@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IHotels } from '../interface/hotels';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  @Input() public selectedHotel: IHotels;
+  public constructor() { }
+  public ngOnInit() {
   }
 
 }

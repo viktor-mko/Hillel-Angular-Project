@@ -14,13 +14,20 @@
       <div class="village">
         <h3>Righteous indignation & like</h3>
         <span class="line"> </span>
-        <app-list></app-list>
+        <div class="activity_box">
+          <ul class="scrollbar style-2">
+            <app-list [selectedHotel]="selectedHotel"
+                      [hotels]="hotels"
+                      (hotel)="selectHotel($event)">
+            </app-list>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
   <div class="element-right">
-    <app-weather></app-weather>
-    <app-profile></app-profile>
+    <app-weather [selectedHotel]="selectedHotel"></app-weather>
+    <app-profile [selectedHotel]="selectedHotel"></app-profile>
   </div>
   <div class="clear"></div>
 </div>

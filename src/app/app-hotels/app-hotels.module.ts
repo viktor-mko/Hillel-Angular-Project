@@ -4,14 +4,14 @@ import { ListComponent } from './list/list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HotelsComponent } from './hotels.component';
-import { MatSliderModule } from '@angular/material/slider';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [ListComponent, ProfileComponent, WeatherComponent, HotelsComponent],
   imports: [
     CommonModule,
-    MatSliderModule
+    SharedModule
   ],
   exports: [ListComponent, ProfileComponent, WeatherComponent, HotelsComponent]
 })
