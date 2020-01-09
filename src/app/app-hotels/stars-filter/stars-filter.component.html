@@ -1,0 +1,9 @@
+<div class="ele-strip">
+  <ul>
+    <li *ngFor="let star of starsParam">
+      <span class="{{star.class}} stars" (click)="selectHotelStars(star)">
+      {{star.text}}
+      </span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+.ele-strip {
+  background: #fda660;
+  padding: 1em 1em;
+  margin: -3px 0px 0px 0px;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 15px;
+    li {
+      display: inline-block;
+      padding: 0 0.5em;
+      border-right: 1px solid #fff;
+      .stars {
+        background: url("/assets/images/star.png") repeat-x 0 3px;
+        background-size: 10px;
+        height: 15px;
+        width: 30px;
+        display: block;
+        font-size: 1em;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          background-position: 0 0;
+          font-size: 1.1em;
+        }
+      }
+      .all-hotels {
+        background: none;
+      }
+      .four-stars {
+        width: 40px;
+      }
+      .five-stars {
+        width: 50px;
+      }
+    }
+  }
+}

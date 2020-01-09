@@ -1,13 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IHotels } from './interface/hotels';
+import { IStars } from './interface/stars';
 
 @Component({
   selector: 'app-hotels',
   templateUrl: './hotels.component.html',
   styleUrls: ['./hotels.component.scss']
 })
-export class HotelsComponent implements OnInit {
+export class HotelsComponent {
 
+  public stars: IStars[] = [
+    {
+      value: 0,
+      class: 'all-hotels',
+      text: 'All'
+    },
+    {
+      value: 3,
+      class: 'three-stars'
+    },
+    {
+      value: 4,
+      class: 'four-stars'
+    },
+    {
+      value: 5,
+      class: 'five-stars'
+    },
+  ];
   public hotels: IHotels[] = [
     {
       id: 0,
@@ -20,7 +40,7 @@ export class HotelsComponent implements OnInit {
         'assets/images/res.jpg',
         'assets/images/r1.jpg'
       ],
-      weather:  {
+      weather: {
         temperature: 12,
         wind: 11,
         icon: 'sun'
@@ -43,7 +63,7 @@ export class HotelsComponent implements OnInit {
         '/assets/images/res.jpg',
         '/assets/images/r1.jpg'
       ],
-      weather:  {
+      weather: {
         temperature: 5,
         wind: 4,
         icon: 'rain'
@@ -66,7 +86,7 @@ export class HotelsComponent implements OnInit {
         '/assets/images/res.jpg',
         '/assets/images/r1.jpg'
       ],
-      weather:  {
+      weather: {
         temperature: -2,
         wind: 2,
         icon: 'cloud'
@@ -82,12 +102,18 @@ export class HotelsComponent implements OnInit {
 
   public selectedHotel: IHotels = this.hotels[0];
 
-  public selectHotel (hotel: IHotels): void {
+  public currentStars: number = 0;
+
+  public displayedHotels: IHotels[] = this.hotels;
+
+  public onSelectHotel (hotel: IHotels): void {
     this.selectedHotel = hotel;
   }
 
-  public constructor () { }
-
-  public ngOnInit () {
+  public onSelectHotelStars (star: number): void {
+    if (star) {
+      this.currentStars = star;
+      this.displayedHotels = this.hotels.filter( ( hotel: IHotels ) => hotel.stars === star);
+    }
   }
 }

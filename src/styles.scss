@@ -37,6 +37,10 @@ a:hover {
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
 }
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
 /*--header start here--*/
 h1 {
   text-align: center;
@@ -49,29 +53,12 @@ h1 {
   width: 40%;
   margin: 0 auto 7em;
 }
-.ele-strip {
-  background: #fda660;
-  padding: 1em 1em;
-  margin: -3px 0px 0px 0px;
-}
 .temperatur {
   background: #5fb3f9;
   text-align: center;
   padding: 1em 1em;
   border-radius: 5px;
   margin-bottom: 2.5em;
-}
-.ele-strip ul{
-  text-align: center;
-}
-.ele-strip ul li {
-  display: inline-block;
-  padding: 0 0.5em;
-  border-right: 1px solid #fff;
-}
-.ele-strip ul li a{
-  font-size:1em;
-  color: #fff;
 }
 /*--teddy-bear--*/
 span.line {

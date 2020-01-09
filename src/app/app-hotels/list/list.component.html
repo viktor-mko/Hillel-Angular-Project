@@ -1,5 +1,8 @@
 
-<li *ngFor="let hotel of hotels" (click)="selectHotel(hotel)" class="activity-row">
+<li *ngFor="let hotel of hotels"
+    (click)="selectHotel(hotel)"
+    class="activity-row"
+>
   <div class="activity-desc">
     <h5>{{hotel.title}}</h5>
     <p>{{hotel.address}}</p>
