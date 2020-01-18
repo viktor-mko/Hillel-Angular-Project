@@ -9,9 +9,6 @@
       >
       </app-stars-filter>
       <div class="village">
-        <div class="search-box">
-          <input type="text" placeholder="Search Hotel">
-        </div>
         <h3>Righteous indignation & like</h3>
         <span class="line"> </span>
         <div class="activity_box">
@@ -28,6 +25,9 @@
   <div class="element-right">
     <app-weather [selectedHotel]="selectedHotel"></app-weather>
     <app-profile [selectedHotel]="selectedHotel"></app-profile>
+    <app-favorite-hotels [favoriteHotels]="favoriteHotels"
+                         (favoriteHotel)="onAddFavoriteHotel($event)">
+    </app-favorite-hotels>
   </div>
   <div class="clear"></div>
 </div>

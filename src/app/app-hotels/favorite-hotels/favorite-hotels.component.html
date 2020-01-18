@@ -1,0 +1,27 @@
+<div class="village">
+  <h3>Favorite Hotels</h3>
+  <span class="line"> </span>
+  <div class="activity_box">
+    <ul class="scrollbar style-2">
+      <li *ngFor="let hotel of favoriteHotels; odd as odd"
+          (click)="selectHotel(hotel)"
+          class="activity-row"
+          [ngClass]="{'odd': odd }"
+      >
+        <div class="activity-desc">
+          <h5>{{hotel.title}}</h5>
+          <p>{{hotel.address}}</p>
+          <p>{{hotel.description}}</p>
+          <h6>Tel:{{hotel.phone}}5</h6>
+        </div>
+        <div class="activity-img">
+          <img src='/assets/images/r1.jpg' alt=""/>
+          <input type="button"
+                 class="remove-from-favorite"
+                 (click)="remFavorite($event)">
+        </div>
+        <div class="clear"></div>
+      </li>
+    </ul>
+  </div>
+</div>

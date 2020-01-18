@@ -1,19 +1,32 @@
+<div class="search-box">
+  <input matInput placeholder="Search Hotel" #searchInput>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<ng-container *ngIf="!isLoading">
+  <li *ngFor="let hotel of hotels | filters: searchInput.value; odd as odd"
+      (click)="selectHotel(hotel)"
+      class="activity-row"
+      [ngClass]="{'odd': odd }"
+  >
+    <div class="activity-desc">
+      <h5>{{hotel.title}}</h5>
+      <p>{{hotel.address}}</p>
+      <p>{{hotel.description}}</p>
+      <h6>Tel:{{hotel.phone}}5</h6>
+    </div>
+    <div class="activity-img">
+      <ul>
+        <li><img src='/assets/images/res.jpg' alt=""/></li>
+        <li><img src='/assets/images/r1.jpg' alt=""/></li>
+      </ul>
+      <button mat-button
+             class="add-to-favorite"
+             [ngClass]="{'active': active}"
+             (click)="addFavorite(hotel)"
+             value="Add to favorite"
+      >Add to favorites</button>
+    </div>
+    <div class="clear"></div>
+  </li>
 
-<li *ngFor="let hotel of hotels"
-    (click)="selectHotel(hotel)"
-    class="activity-row"
->
-  <div class="activity-desc">
-    <h5>{{hotel.title}}</h5>
-    <p>{{hotel.address}}</p>
-    <p>{{hotel.description}}</p>
-    <h6>Tel:{{hotel.phone}}5</h6>
-  </div>
-  <div class="activity-img">
-    <ul>
-      <li><img src='/assets/images/res.jpg' alt=""/></li>
-      <li><img src='/assets/images/r1.jpg' alt=""/></li>
-    </ul>
-  </div>
-  <div class="clear"></div>
-</li>
+</ng-container>

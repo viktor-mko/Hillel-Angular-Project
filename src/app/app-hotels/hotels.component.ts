@@ -9,6 +9,8 @@ import { IStars } from './interface/stars';
 })
 export class HotelsComponent {
 
+  public favoriteHotels: IHotels[] = [];
+
   public stars: IStars[] = [
     {
       value: 0,
@@ -97,6 +99,75 @@ export class HotelsComponent {
         photo: '/assets/images/b3.jpg'
       },
       stars: 5
+    },
+    {
+      id: 3,
+      title: 'Cats Home',
+      address: 'Kyiv',
+      description: 'Hotels with cats',
+      phone: '+3242353434',
+      picture: 'assets/images/2.jpg',
+      photos: [
+        '/assets/images/res.jpg',
+        '/assets/images/r1.jpg'
+      ],
+      weather: {
+        temperature: 5,
+        wind: 4,
+        icon: 'rain'
+      },
+      profile: {
+        followers: 12,
+        following: 111,
+        photo: '/assets/images/b2.jpg'
+      },
+      stars: 4
+    },
+    {
+      id: 4,
+      title: 'Hillton',
+      address: 'NY',
+      description: 'Best Hotel',
+      phone: '+3242353434',
+      picture: 'assets/images/2.jpg',
+      photos: [
+        '/assets/images/res.jpg',
+        '/assets/images/r1.jpg'
+      ],
+      weather: {
+        temperature: 5,
+        wind: 4,
+        icon: 'rain'
+      },
+      profile: {
+        followers: 12,
+        following: 111,
+        photo: '/assets/images/b2.jpg'
+      },
+      stars: 5
+    },
+    {
+      id: 5,
+      title: 'Berloga plaza',
+      address: 'Zashkow',
+      description: 'For one night',
+      phone: '+3242353434',
+      picture: 'assets/images/2.jpg',
+      photos: [
+        '/assets/images/res.jpg',
+        '/assets/images/r1.jpg'
+      ],
+      weather: {
+        temperature: 5,
+        wind: 4,
+        icon: 'rain'
+      },
+      profile: {
+        followers: 12,
+        following: 111,
+        photo: '/assets/images/b2.jpg'
+      },
+      stars: 3
     }
   ];
 
@@ -110,10 +181,22 @@ export class HotelsComponent {
     this.selectedHotel = hotel;
   }
 
+  public onAddFavoriteHotel (favoriteHotel: IHotels): void {
+    const searchHotel: IHotels | null = this.favoriteHotels.find(
+      (element: IHotels) => element.id === favoriteHotel.id
+    );
+    if (!searchHotel) {
+      this.favoriteHotels.push(favoriteHotel);
+      return;
+    }
+}
+
   public onSelectHotelStars (star: number): void {
-    if (star) {
+    if (star > 0) {
       this.currentStars = star;
       this.displayedHotels = this.hotels.filter( ( hotel: IHotels ) => hotel.stars === star);
+    } else {
+      this.displayedHotels = this.hotels;
     }
   }
 }
