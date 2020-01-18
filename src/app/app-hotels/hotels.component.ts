@@ -182,6 +182,7 @@ export class HotelsComponent {
   }
 
   public onAddFavoriteHotel (favoriteHotel: IHotels): void {
+    console.log("hotel");
     const searchHotel: IHotels | null = this.favoriteHotels.find(
       (element: IHotels) => element.id === favoriteHotel.id
     );

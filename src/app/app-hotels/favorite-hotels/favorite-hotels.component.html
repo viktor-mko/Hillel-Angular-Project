@@ -4,7 +4,6 @@
   <div class="activity_box">
     <ul class="scrollbar style-2">
       <li *ngFor="let hotel of favoriteHotels; odd as odd"
-          (click)="selectHotel(hotel)"
           class="activity-row"
           [ngClass]="{'odd': odd }"
       >

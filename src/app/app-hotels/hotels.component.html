@@ -15,7 +15,8 @@
           <ul class="scrollbar style-2">
             <app-list [selectedHotel]="selectedHotel"
                       [hotels]="displayedHotels"
-                      (hotel)="onSelectHotel($event)">
+                      (hotel)="onSelectHotel($event)"
+                      (favoriteHotel)="onAddFavoriteHotel($event)">
             </app-list>
           </ul>
         </div>
@@ -26,7 +27,7 @@
     <app-weather [selectedHotel]="selectedHotel"></app-weather>
     <app-profile [selectedHotel]="selectedHotel"></app-profile>
     <app-favorite-hotels [favoriteHotels]="favoriteHotels"
-                         (favoriteHotel)="onAddFavoriteHotel($event)">
+                         >
     </app-favorite-hotels>
   </div>
   <div class="clear"></div>

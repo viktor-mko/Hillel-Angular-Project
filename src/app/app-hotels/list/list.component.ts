@@ -20,10 +20,13 @@ export class ListComponent implements OnInit {
   public active: boolean = false;
 
   public selectHotel(hotel: IHotels): void {
+    console.log(hotel);
     this.hotel.emit(hotel);
   }
 
-  public addFavorite(hotel: IHotels): void {
+  public addFavorite(hotel: IHotels, event: Event): void {
+    event.stopPropagation();
+    console.log(hotel.phone);
     this.favoriteHotel.emit(hotel);
   }
 
